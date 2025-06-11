@@ -135,3 +135,65 @@ body {
 
 
 
+/* Video Grid Styles */
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-item {
+  flex: 1;
+  max-width: calc(33.333% - 20px);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments - Standard CSS */
+@media screen and (max-width: 768px) {
+  .video-row {
+    flex-direction: column;
+  }
+  
+  .video-item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .video-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.video-description {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-size: 1.05rem;
+  hyphens: auto;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
